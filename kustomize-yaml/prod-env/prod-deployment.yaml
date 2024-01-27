@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: kaiburrprod-deploy
+  name: kaiburrproddeploy
   namespace: prod-ns
 spec:                
   selector:         
@@ -24,4 +24,4 @@ spec:
               cpu: "1"
               memory: "1Gi"
           ports:
-            - containerPort: 8080  
+            - containerPort: 8080
