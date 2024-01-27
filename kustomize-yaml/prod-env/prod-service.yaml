@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: prodkaiburr
+    app: prod
   ports:
   - port: 80
     targetPort: 8080
