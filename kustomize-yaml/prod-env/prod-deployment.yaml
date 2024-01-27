@@ -1,20 +1,20 @@
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: kaiburr:kaiburr-14
+  name: kaiburr:1.0.0-16
   namespace: prod-ns
 spec:                
   selector:         
     matchLabels:
-      app: prodkaiburr:kaiburr-14
+      app: prodkaiburr:1.0.0-16
   replicas: 2       
   template:
     metadata:
       labels:        
-        app: prodkaiburr:kaiburr-14
+        app: prodkaiburr:1.0.0-16
     spec:
       containers:
-        - name: prodkaiburr:kaiburr-14
+        - name: prodkaiburr:1.0.0-16
           image: aasaithambi5/back-end-app:1
           resources:
             requests:
