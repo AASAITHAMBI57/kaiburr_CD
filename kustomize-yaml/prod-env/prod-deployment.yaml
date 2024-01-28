@@ -7,7 +7,7 @@ spec:
   selector:         
     matchLabels:
       app: prod
-  replicas: 2      
+  replicas: 2       
   template:
     metadata:
       labels:        
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: prodenvcontainer
-          image: aasaithambi5/prod-kaiburr:2.0.0-19
+          image: aasaithambi5/kaiburr:1.0.0-17
           resources:
             requests:
               cpu: "500m"
@@ -36,6 +36,11 @@ spec:
               configMapKeyRef:
                 name: db-conf-prod 
                 key: name
+          - name: DB_PORT  
+            valueFrom:
+              configMapKeyRef:
+                name: db-conf-prod 
+                key: port
           - name: DB_USERNAME  
             valueFrom:
               secretKeyRef:
@@ -45,4 +50,4 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: db-credentials-prod
-                key: password 
+                key: password
