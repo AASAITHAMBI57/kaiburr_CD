@@ -4,5 +4,6 @@ metadata:
   name: db-conf-prod
   namespace: prod-ns
 data:
- host: 172.31.47.123
+ host: "172.31.47.123"
+ port: "27017"
  name: prod
