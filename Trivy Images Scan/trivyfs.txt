@@ -1,0 +1,59 @@
+
+node_modules/paypal-rest-sdk/Gemfile.lock (bundler)
+===================================================
+Total: 8 (UNKNOWN: 0, LOW: 0, MEDIUM: 3, HIGH: 5, CRITICAL: 0)
+
+┌──────────────┬─────────────────────┬──────────┬────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│   Library    │    Vulnerability    │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                            │
+├──────────────┼─────────────────────┼──────────┼────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ addressable  │ CVE-2021-32740      │ HIGH     │ fixed  │ 2.5.2             │ >= 2.8.0      │ ReDoS in templates                                          │
+│              │                     │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-32740                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ commonmarker │ CVE-2024-22051      │          │        │ 0.14.15           │ >= 0.23.4     │ commonmarker: integer overflow in cmark-gfm's table row     │
+│              │                     │          │        │                   │               │ parsing may lead to heap...                                 │
+│              │                     │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2024-22051                  │
+│              ├─────────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-48wp-p9qv-4j64 │          │        │                   │ >= 0.23.9     │ Commonmarker vulnerable to to several quadratic complexity  │
+│              │                     │          │        │                   │               │ bugs that may lead to...                                    │
+│              │                     │          │        │                   │               │ https://github.com/advisories/GHSA-48wp-p9qv-4j64           │
+│              ├─────────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-fmx4-26r3-wxpf │          │        │                   │ >= 0.23.4     │ Integer overflow in cmark-gfm table parsing extension leads │
+│              │                     │          │        │                   │               │ to heap memory corruption...                                │
+│              │                     │          │        │                   │               │ https://github.com/advisories/GHSA-fmx4-26r3-wxpf           │
+│              ├─────────────────────┼──────────┤        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-4qw4-jpp4-8gvp │ MEDIUM   │        │                   │ >= 0.23.6     │ Unbounded resource exhaustion in cmark-gfm autolink         │
+│              │                     │          │        │                   │               │ extension may lead to denial of...                          │
+│              │                     │          │        │                   │               │ https://github.com/advisories/GHSA-4qw4-jpp4-8gvp           │
+│              ├─────────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-636f-xm5j-pj9m │          │        │                   │ >= 0.23.7     │ Several quadratic complexity bugs may lead to denial of     │
+│              │                     │          │        │                   │               │ service in Commonmarker...                                  │
+│              │                     │          │        │                   │               │ https://github.com/advisories/GHSA-636f-xm5j-pj9m           │
+│              ├─────────────────────┤          │        │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-7vh7-fw88-wj87 │          │        │                   │ >= 0.23.10    │ Several quadratic complexity bugs may lead to denial of     │
+│              │                     │          │        │                   │               │ service in Commonmarker...                                  │
+│              │                     │          │        │                   │               │ https://github.com/advisories/GHSA-7vh7-fw88-wj87           │
+├──────────────┼─────────────────────┼──────────┤        ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ json         │ CVE-2020-10663      │ HIGH     │        │ 1.8.6             │ >= 2.3.0      │ rubygem-json: Unsafe object creation vulnerability in JSON  │
+│              │                     │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-10663                  │
+└──────────────┴─────────────────────┴──────────┴────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
+
+package-lock.json (npm)
+=======================
+Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 4, HIGH: 0, CRITICAL: 0)
+
+┌──────────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬────────────────────────────────────────────────────────┐
+│     Library      │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                         Title                          │
+├──────────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼────────────────────────────────────────────────────────┤
+│ axios            │ CVE-2023-45857 │ MEDIUM   │ fixed  │ 0.24.0            │ 1.6.0         │ axios: exposure of confidential data stored in cookies │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-45857             │
+│                  │                │          │        ├───────────────────┤               │                                                        │
+│                  │                │          │        │ 0.26.1            │               │                                                        │
+│                  │                │          │        │                   │               │                                                        │
+│                  │                │          │        ├───────────────────┤               │                                                        │
+│                  │                │          │        │ 1.5.1             │               │                                                        │
+│                  │                │          │        │                   │               │                                                        │
+├──────────────────┼────────────────┤          │        ├───────────────────┼───────────────┼────────────────────────────────────────────────────────┤
+│ follow-redirects │ CVE-2023-26159 │          │        │ 1.15.3            │ 1.15.4        │ follow-redirects: Improper Input Validation due to the │
+│                  │                │          │        │                   │               │ improper handling of URLs by...                        │
+│                  │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2023-26159             │
+└──────────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴────────────────────────────────────────────────────────┘
