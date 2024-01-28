@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-conf-prod
+  namespace: prod-ns
+data:
+ host: 172.31.47.123
+ name: prod
