@@ -1,0 +1,31 @@
+---
+- hosts: mongodb
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Import the public key used by the package management system
+      apt_key:
+        url: https://www.mongodb.org/static/pgp/server-4.4.asc
+        state: present
+    - name: Add APT repository
+      apt_repository:
+        repo: deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse
+        state: present
+    - name: Sever apt-get update package
+      apt:
+        name: "*"
+        state: latest
+    - name: Install MongoDB package
+      apt:
+        pkg: mongodb-org
+        state: present
+        update_cache: yes
+    - name: Enable MongoDB service
+      systemd:
+        name: mongod
+        enabled: yes
+    - name: Start MongoDB service
+      systemd:
+        name: mongod
+        state: started
+...
