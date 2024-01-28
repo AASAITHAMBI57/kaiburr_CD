@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: devenvcontainer
-          image: aasaithambi5/dev-kaiburr:2.2.0-5
+          image: aasaithambi5/kaiburr:1.0.0-16
           resources:
             requests:
               cpu: "500m"
